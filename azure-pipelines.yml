@@ -20,7 +20,8 @@ stages:
       displayName: Build Maven Project
 
       inputs:
-        mavenPomFile: 'pom.xml'
+        mavenPomFile: 'artifact1/pom.xml'
+
         goals: 'clean package'
 
         mavenOptions: '-Xmx3072m'
@@ -39,7 +40,7 @@ stages:
       displayName: Publish Artifacts
 
       inputs:
-        PathtoPublish: 'target'
+        PathtoPublish: 'artifact1/target'
 
         ArtifactName: 'drop'
 
